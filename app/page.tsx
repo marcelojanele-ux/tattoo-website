@@ -457,9 +457,17 @@ export default function Home() {
   </h2>
 
   {/* MAIN DESCRIPTION */}
-  <p style={{ color: "#aaa", fontSize: "14px", maxWidth: "400px" }}>
-    For bookings and inquiries, message us directly.
-  </p>
+  <p
+  style={{
+    color: "#aaa",
+    fontSize: "14px",
+    maxWidth: "400px",
+    textAlign: "center",   // ✅ center the text
+    margin: "0 auto",      // ✅ center the block itself
+  }}
+>
+  For bookings and inquiries, message us directly.
+</p>
 
   {/* INFO BLOCK */}
   <div
