@@ -479,7 +479,7 @@ export default function Home() {
   For bookings and inquiries, message us directly.
 </p>
 
-  {/* INFO BLOCK */}
+   {/* INFO BLOCK */}
   <div
   style={{
     marginTop: "10px",
