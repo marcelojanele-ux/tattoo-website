@@ -38,7 +38,9 @@ export default function Home() {
       <section
   id="home"
   style={{
-    minHeight: "100dvh",
+    
+height: "100svh",
+maxHeight: "900px",
     width: "100%",
     position: "relative",
     overflow: "hidden",
@@ -98,8 +100,9 @@ export default function Home() {
       position: "absolute",
       inset: 0,
       backgroundImage: "url('/tattoo.png')",
-     backgroundSize: "cover",
-backgroundPosition: "center 30%",
+     
+backgroundSize: "cover",
+backgroundPosition: "50% 25%",  
       backgroundRepeat: "no-repeat",
       zIndex: 0,
       WebkitMaskImage:
