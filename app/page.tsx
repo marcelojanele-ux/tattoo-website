@@ -328,7 +328,7 @@ export default function Home() {
     <div style={{
       display: "grid",
       gridTemplateColumns: "repeat(4, 1fr)",
-      gap: "25px",
+      gap: "35px",
     }}>
       {[
         "/tattoo1.jpg","/tattoo2.jpg","/tattoo3.jpg","/tattoo4.jpg",
@@ -350,7 +350,7 @@ export default function Home() {
     <div style={{
       display: "grid",
       gridTemplateColumns: "repeat(4, 1fr)",
-      gap: "25px",
+      gap: "35px",
     }}>
       {[
         "/pierce1.jpg","/pierce2.jpg","/pierce3.jpg","/pierce4.jpg",
@@ -416,6 +416,8 @@ export default function Home() {
 
     textAlign: "center",
     padding: "100px 20px",
+    paddingBottom: "160px"
+
   }}
 >
 
@@ -425,7 +427,7 @@ export default function Home() {
     position: "absolute",
     inset: 0,
     backgroundImage: "url('/bg2.png')",
-    backgroundSize: "100% 100%",
+    backgroundSize: "cover",
 
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -450,59 +452,47 @@ export default function Home() {
 
   {/* CONTENT */}
   <div style={{ position: "relative", zIndex: 2 }}>
-    <h2 style={{ fontSize: "40px", letterSpacing: "3px" }}>
-      BOOK / CONTACT
-    </h2>
+  <h2 style={{ fontSize: "40px", letterSpacing: "3px" }}>
+    BOOK / CONTACT
+  </h2>
 
-    {/* MAIN DESCRIPTION */}
-    <p style={{ color: "#aaa", fontSize: "14px", maxWidth: "400px" }}>
-      For bookings and inquiries, message us directly.
+  {/* MAIN DESCRIPTION */}
+  <p style={{ color: "#aaa", fontSize: "14px", maxWidth: "400px" }}>
+    For bookings and inquiries, message us directly.
+  </p>
+
+  {/* INFO BLOCK */}
+  <div
+    style={{
+      marginTop: "10px",
+      padding: "20px",
+      border: "1px solid #800000",
+      maxWidth: "420px",
+      fontSize: "13px",
+      lineHeight: "1.8",
+      color: "#bbb",
+      background: "rgba(0,0,0,0.4)",
+    }}
+  >
+    <p>🕒 1:00 PM TO 10:00 PM</p>
+
+    <p style={{ color: "#888" }}>
+      BY APPOINTMENTS ONLY (no walk-ins available)
     </p>
 
-    {/* INFO BLOCK */}
-    <div
-      style={{
-        marginTop: "10px",
-        padding: "20px",
-        border: "1px solid #800000",
-        maxWidth: "420px",
-        fontSize: "13px",
-        lineHeight: "1.8",
-        color: "#bbb",
-        background: "rgba(0,0,0,0.4)", // subtle glass effect
-      }}
-    >
-      <p>📍 Sampaloc, Manila</p>
+    <p style={{ marginTop: "10px" }}>
+      Located at
+      <br />
+      📍1329 Blumentritt, Sampaloc, Manila
+    </p>
 
-      <p style={{ color: "#888" }}>
-        Private Studio • BY APPOINTMENTS ONLY
-      </p>
-
-      <div style={{ margin: "10px 0", color: "#666" }}>
-        • 18+ only <br />
-        • No minors without consent <br />
-        • No copying other artists’ work
-      </div>
-
-      <p style={{ marginTop: "10px" }}>
-        Message Us To Book
-      </p>
-
-      <p
-        style={{
-          marginTop: "10px",
-          fontStyle: "italic",
-          color: "#888",
-          lineHeight: "1.6",
-        }}
-      >
-        Every piece is intentional.
-        <br />
-        Send your concept
-        <br />
-        and we’ll bring it to life.
-      </p>
+    <div style={{ marginTop: "15px" }}>
+      <p>📲 Contact Us:</p>
+      <p>Instagram: @rudemnl_tattoo</p>
+      <p>Whatsapp: +63 921 675 9644</p>
     </div>
+  </div>
+
 
     {/* INSTAGRAM BUTTON */}
     <a
