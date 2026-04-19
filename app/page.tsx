@@ -436,7 +436,7 @@ export default function Home() {
   style={{
     position: "absolute",
     inset: 0,
-    backgroundImage: "url('/bg.png')",
+    backgroundImage: "url('/bg2.png')",
 
     /* FULL STRETCH */
     backgroundSize: "100% 100%",
