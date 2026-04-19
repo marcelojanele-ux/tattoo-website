@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 export default function Home() {
 
   const navStyle = {
@@ -7,18 +9,24 @@ export default function Home() {
     letterSpacing: "2px",
     transition: "0.3s",
   };
+
   return (
-    <main
-      style={{
-        fontFamily: "Arial, sans-serif",
-        margin: 0,
-        padding: 0,
-        width: "100%",
-        overflowX: "hidden",
-        scrollBehavior: "smooth",
-        backgroundColor: "black",
-      }}
-    >
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+
+      <main
+        style={{
+          fontFamily: "Arial, sans-serif",
+          margin: 0,
+          padding: 0,
+          width: "100%",
+          overflowX: "hidden",
+          scrollBehavior: "smooth",
+          backgroundColor: "black",
+        }}
+      >
   
      
 
@@ -41,7 +49,7 @@ export default function Home() {
 >
 
   {/* NAVBAR (TOP OVERLAY) */}
- <nav
+<nav
   style={{
     position: "fixed",
     top: "20px",
@@ -49,8 +57,9 @@ export default function Home() {
     width: "100%",
     display: "flex",
     justifyContent: "space-between",
-    padding: "0 50px",
+    padding: "0 20px", // ⬅️ smaller padding for mobile
     zIndex: 1000,
+    flexWrap: "wrap", // ⬅️ allows wrapping on small screens
   }}
 >
   {/* LEFT SIDE */}
@@ -622,6 +631,7 @@ export default function Home() {
   </p>
 </footer>
 
-    </main>
-  );
+   </main>
+</>
+);
 }
