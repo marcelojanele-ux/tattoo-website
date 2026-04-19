@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* GALLERY HOVER EFFECT */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+
+  filter: grayscale(100%) contrast(120%);
+  transition: 0.4s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.1);
+  filter: grayscale(0%) contrast(100%);
+}
+
+.book-input {
+  padding: 12px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 13px;
+  outline: none;
+}
+
+.book-input::placeholder {
+  color: #777;
+}
+
+.book-input:focus {
+  border: 1px solid #800000;
+}
+
+.book-btn {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: white;
+  color: black;
+}
+
+.footer-link {
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
