@@ -474,7 +474,8 @@ export default function Home() {
       background: "rgba(0,0,0,0.4)",
     }}
   >
-    <p>🕒 1:00 PM TO 10:00 PM</p>
+    {/* ✅ NEW INFO (INSERTED) */}
+    <p> 1:00 PM TO 10:00 PM</p>
 
     <p style={{ color: "#888" }}>
       BY APPOINTMENTS ONLY (no walk-ins available)
@@ -483,14 +484,48 @@ export default function Home() {
     <p style={{ marginTop: "10px" }}>
       Located at
       <br />
-      📍1329 Blumentritt, Sampaloc, Manila
+      1329 Blumentritt, Sampaloc, Manila
     </p>
 
     <div style={{ marginTop: "15px" }}>
-      <p>📲 Contact Us:</p>
+      <p> Contact Us:</p>
       <p>Instagram: @rudemnl_tattoo</p>
       <p>Whatsapp: +63 921 675 9644</p>
     </div>
+
+    {/* 🔻 ORIGINAL CONTENT (KEPT) */}
+    <hr style={{ margin: "15px 0", borderColor: "#333" }} />
+
+    <p> Sampaloc, Manila</p>
+
+    <p style={{ color: "#888" }}>
+      Private Studio • BY APPOINTMENTS ONLY
+    </p>
+
+    <div style={{ margin: "10px 0", color: "#666" }}>
+      • 18+ only <br />
+      • No minors without consent <br />
+      • No copying other artists’ work
+    </div>
+
+    <p style={{ marginTop: "10px" }}>
+      Message Us To Book
+    </p>
+
+    <p
+      style={{
+        marginTop: "10px",
+        fontStyle: "italic",
+        color: "#888",
+        lineHeight: "1.6",
+      }}
+    >
+      Every piece is intentional.
+      <br />
+      Send your concept
+      <br />
+      and we’ll bring it to life.
+    </p>
   </div>
 
 
