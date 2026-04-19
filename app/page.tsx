@@ -436,17 +436,20 @@ export default function Home() {
   style={{
     position: "absolute",
     inset: 0,
-    backgroundImage: "url('/bg2.png')",
-    backgroundSize: "cover",
+    backgroundImage: "url('/bg.png')",
 
+    /* FULL STRETCH */
+    backgroundSize: "100% 100%",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+
     zIndex: 0,
 
+    /* SIDE FADE */
     WebkitMaskImage:
-      "linear-gradient(to bottom, black 0%, black 80%, transparent 100%)",
+      "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
     maskImage:
-      "linear-gradient(to bottom, black 0%, black 80%, transparent 100%)",
+      "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
   }}
 />
 
@@ -502,7 +505,7 @@ export default function Home() {
   >
     {/* LEFT COLUMN */}
     <div style={{ flex: 1 }}>
-      <p>🕒 1:00 PM TO 10:00 PM</p>
+      <p> 1:00 PM TO 10:00 PM</p>
 
       <p style={{ color: "#888" }}>
         BY APPOINTMENTS ONLY (no walk-ins available)
@@ -513,13 +516,13 @@ export default function Home() {
         1329 Blumentritt, Sampaloc, Manila
       </p>
 
-      <p style={{ marginTop: "10px" }}>📲 Contact Us:</p>
+      <p style={{ marginTop: "10px" }}> Contact Us:</p>
       <p>Whatsapp: +63 921 675 9644</p>
     </div>
 
     {/* RIGHT COLUMN */}
     <div style={{ flex: 1 }}>
-      <p>📍 Sampaloc, Manila</p>
+      <p> Sampaloc, Manila</p>
 
       <p style={{ color: "#888" }}>
         Private Studio • BY APPOINTMENTS ONLY
