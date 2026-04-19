@@ -463,70 +463,75 @@ export default function Home() {
 
   {/* INFO BLOCK */}
   <div
+  style={{
+    marginTop: "10px",
+    padding: "20px",
+    border: "1px solid #800000",
+    maxWidth: "600px", // ⬅️ slightly wider for 2 columns
+    fontSize: "13px",
+    lineHeight: "1.8",
+    color: "#bbb",
+    background: "rgba(0,0,0,0.4)",
+  }}
+>
+  <div
     style={{
-      marginTop: "10px",
-      padding: "20px",
-      border: "1px solid #800000",
-      maxWidth: "420px",
-      fontSize: "13px",
-      lineHeight: "1.8",
-      color: "#bbb",
-      background: "rgba(0,0,0,0.4)",
+      display: "flex",
+      justifyContent: "space-between",
+      gap: "40px",
+      textAlign: "left",
     }}
   >
-    {/* ✅ NEW INFO (INSERTED) */}
-    <p> 1:00 PM TO 10:00 PM</p>
+    {/* LEFT COLUMN */}
+    <div style={{ flex: 1 }}>
+      <p>🕒 1:00 PM TO 10:00 PM</p>
 
-    <p style={{ color: "#888" }}>
-      BY APPOINTMENTS ONLY (no walk-ins available)
-    </p>
+      <p style={{ color: "#888" }}>
+        BY APPOINTMENTS ONLY (no walk-ins available)
+      </p>
 
-    <p style={{ marginTop: "10px" }}>
-      Located at
-      <br />
-      1329 Blumentritt, Sampaloc, Manila
-    </p>
+      <p style={{ marginTop: "10px" }}>
+        Located at <br />
+        1329 Blumentritt, Sampaloc, Manila
+      </p>
 
-    <div style={{ marginTop: "15px" }}>
-      <p> Contact Us:</p>
-      <p>Instagram: @rudemnl_tattoo</p>
+      <p style={{ marginTop: "10px" }}>📲 Contact Us:</p>
       <p>Whatsapp: +63 921 675 9644</p>
     </div>
 
-    {/* 🔻 ORIGINAL CONTENT (KEPT) */}
-    <hr style={{ margin: "15px 0", borderColor: "#333" }} />
+    {/* RIGHT COLUMN */}
+    <div style={{ flex: 1 }}>
+      <p>📍 Sampaloc, Manila</p>
 
-    <p> Sampaloc, Manila</p>
+      <p style={{ color: "#888" }}>
+        Private Studio • BY APPOINTMENTS ONLY
+      </p>
 
-    <p style={{ color: "#888" }}>
-      Private Studio • BY APPOINTMENTS ONLY
-    </p>
+      <div style={{ marginTop: "10px", color: "#666" }}>
+        • 18+ only <br />
+        • No minors without consent <br />
+        • No copying other artists’ work
+      </div>
 
-    <div style={{ margin: "10px 0", color: "#666" }}>
-      • 18+ only <br />
-      • No minors without consent <br />
-      • No copying other artists’ work
+      <p style={{ marginTop: "10px" }}>Message Us To Book</p>
     </div>
-
-    <p style={{ marginTop: "10px" }}>
-      Message Us To Book
-    </p>
-
-    <p
-      style={{
-        marginTop: "10px",
-        fontStyle: "italic",
-        color: "#888",
-        lineHeight: "1.6",
-      }}
-    >
-      Every piece is intentional.
-      <br />
-      Send your concept
-      <br />
-      and we’ll bring it to life.
-    </p>
   </div>
+
+  {/* BOTTOM CENTER TEXT */}
+  <p
+    style={{
+      marginTop: "20px",
+      fontStyle: "italic",
+      color: "#888",
+      textAlign: "center",
+      lineHeight: "1.6",
+    }}
+  >
+    Every piece is intentional.
+    <br />
+    Send your concept and we’ll bring it to life.
+  </p>
+</div>
 
 
     {/* INSTAGRAM BUTTON */}
