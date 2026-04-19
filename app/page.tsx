@@ -14,6 +14,7 @@ export default function Home() {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
       </Head>
 
       <main
@@ -57,14 +58,15 @@ export default function Home() {
     left: 0,
     width: "100%",
     display: "flex",
-    justifyContent: "space-between",
+     gap: "10px",
+     justifyContent: "center",
     padding: "0 20px", // ⬅️ smaller padding for mobile
     zIndex: 1000,
     flexWrap: "wrap", // ⬅️ allows wrapping on small screens
   }}
 >
   {/* LEFT SIDE */}
-  <div style={{ display: "flex", gap: "25px" }}>
+  <div style={{ display: "flex", gap: "15px", flexWrap: "wrap", justifyContent: "center" }}>
     {["HOME", "ABOUT"].map((item) => (
       <a
         key={item}
@@ -77,7 +79,7 @@ export default function Home() {
   </div>
 
   {/* RIGHT SIDE */}
-  <div style={{ display: "flex", gap: "25px" }}>
+  <div style={{ display: "flex", gap: "15px", flexWrap: "wrap", justifyContent: "center" }}>
     {["GALLERY", "BOOK"].map((item) => (
       <a
         key={item}
@@ -133,7 +135,7 @@ export default function Home() {
       src="/logo.png"
       alt="logo"
       style={{
-        width: "450px",
+        width: "clamp(200px, 60vw, 450px)",
         opacity: 0.95,
       }}
     />
@@ -141,7 +143,7 @@ export default function Home() {
     {/* TAGLINE */}
     <h1
       style={{
-        fontSize: "40px",
+        fontSize: "clamp(24px, 6vw, 40px)",
         fontWeight: "normal",
         color: "white",
         letterSpacing: "2px",
@@ -222,19 +224,31 @@ export default function Home() {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    gap: "80px",
+
+    gap: "clamp(20px, 6vw, 80px)", // ✅ responsive gap
     maxWidth: "1200px",
     margin: "auto",
+
+    flexWrap: "wrap",              // ✅ allows stacking
+    textAlign: "center",           // ✅ better for mobile
   }}
 >
   {/* LEFT - IMAGES */}
-  <div style={{ display: "flex", gap: "20px" }}>
+  
+<div
+  style={{
+    display: "flex",
+    gap: "20px",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  }}
+>
     <img
       src="/dee.png"
       alt="artist 1"
       style={{
-        width: "200px",
-        height: "300px",
+        width: "clamp(140px, 40vw, 200px)",
+height: "clamp(200px, 50vw, 300px)",
         objectFit: "cover",
 
         border: "1px solid rgba(255,255,255,0.15)",
@@ -243,23 +257,33 @@ export default function Home() {
         transform: "rotate(-2deg)",
       }}
     />
-
+</div>
+<div
+  style={{
+    maxWidth: "500px",
+    position: "relative",
+    textAlign: "center", // keep this
+  }}
+>
     <img
       src="/jc.png"
       alt="artist 2"
       style={{
-        width: "200px",
-        height: "300px",
+        width: "clamp(140px, 40vw, 200px)",
+height: "clamp(200px, 50vw, 300px)",
         objectFit: "cover",
 
         border: "1px solid rgba(255,255,255,0.15)",
         filter: "grayscale(100%) contrast(110%)",
 
         transform: "rotate(2deg)",
-        marginTop: "40px", // staggered look
+        
+marginTop: "clamp(0px, 5vw, 40px)"
       }}
     />
   </div>
+
+
 
   {/* RIGHT - TEXT */}
   <div
@@ -337,7 +361,8 @@ export default function Home() {
 
     <div style={{
       display: "grid",
-      gridTemplateColumns: "repeat(4, 1fr)",
+      gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+
       gap: "35px",
     }}>
       {[
@@ -359,7 +384,7 @@ export default function Home() {
 
     <div style={{
       display: "grid",
-      gridTemplateColumns: "repeat(4, 1fr)",
+      gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
       gap: "35px",
     }}>
       {[
